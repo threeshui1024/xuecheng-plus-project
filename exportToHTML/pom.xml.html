@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>pom.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #bababa;}
+.s2 { color: #6a8759;}
+.s3 { color: #a9b7c6;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+pom.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s2">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s2">=&quot;UTF-8&quot;</span><span class="s0">?&gt;</span>
+<span class="s0">&lt;project </span><span class="s1">xmlns</span><span class="s2">=&quot;http://maven.apache.org/POM/4.0.0&quot; </span><span class="s1">xmlns:xsi</span><span class="s2">=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="s1">xsi:schemaLocation</span><span class="s2">=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;modelVersion&gt;</span><span class="s3">4.0.0</span><span class="s0">&lt;/modelVersion&gt;</span>
+    <span class="s0">&lt;parent&gt;</span>
+        <span class="s0">&lt;artifactId&gt;</span><span class="s3">xuecheng-plus-parent</span><span class="s0">&lt;/artifactId&gt;</span>
+        <span class="s0">&lt;groupId&gt;</span><span class="s3">com.xuecheng</span><span class="s0">&lt;/groupId&gt;</span>
+        <span class="s0">&lt;version&gt;</span><span class="s3">0.0.1</span><span class="s0">&lt;/version&gt;</span>
+        <span class="s0">&lt;relativePath&gt;</span><span class="s3">../xuecheng-plus-parent</span><span class="s0">&lt;/relativePath&gt;</span>
+    <span class="s0">&lt;/parent&gt;</span>
+    <span class="s0">&lt;artifactId&gt;</span><span class="s3">xuecheng-plus-checkcode</span><span class="s0">&lt;/artifactId&gt;</span>
+
+    <span class="s0">&lt;dependencies&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">com.xuecheng</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">xuecheng-plus-base</span><span class="s0">&lt;/artifactId&gt;</span>
+            <span class="s0">&lt;version&gt;</span><span class="s3">0.0.1</span><span class="s0">&lt;/version&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">com.alibaba.cloud</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">spring-cloud-starter-alibaba-nacos-discovery</span><span class="s0">&lt;/artifactId&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">com.alibaba.cloud</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">spring-cloud-starter-alibaba-nacos-config</span><span class="s0">&lt;/artifactId&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">com.github.penggle</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">kaptcha</span><span class="s0">&lt;/artifactId&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+        <span class="s4">&lt;!-- Spring Boot 的 Spring Web MVC 集成 --&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">org.springframework.boot</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">spring-boot-starter-web</span><span class="s0">&lt;/artifactId&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">org.springframework.boot</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">spring-boot-starter-validation</span><span class="s0">&lt;/artifactId&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+        <span class="s4">&lt;!-- 排除 Spring Boot 依赖的日志包冲突 --&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">org.springframework.boot</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">spring-boot-starter</span><span class="s0">&lt;/artifactId&gt;</span>
+            <span class="s0">&lt;exclusions&gt;</span>
+                <span class="s0">&lt;exclusion&gt;</span>
+                    <span class="s0">&lt;groupId&gt;</span><span class="s3">org.springframework.boot</span><span class="s0">&lt;/groupId&gt;</span>
+                    <span class="s0">&lt;artifactId&gt;</span><span class="s3">spring-boot-starter-logging</span><span class="s0">&lt;/artifactId&gt;</span>
+                <span class="s0">&lt;/exclusion&gt;</span>
+            <span class="s0">&lt;/exclusions&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+        <span class="s4">&lt;!-- Spring Boot 集成 Junit --&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">org.springframework.boot</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">spring-boot-starter-test</span><span class="s0">&lt;/artifactId&gt;</span>
+            <span class="s0">&lt;scope&gt;</span><span class="s3">test</span><span class="s0">&lt;/scope&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+        <span class="s4">&lt;!-- Spring Boot 集成 log4j2 --&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">org.springframework.boot</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">spring-boot-starter-log4j2</span><span class="s0">&lt;/artifactId&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+
+        <span class="s4">&lt;!-- Spring Boot 集成 swagger --&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">com.spring4all</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">swagger-spring-boot-starter</span><span class="s0">&lt;/artifactId&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+        <span class="s0">&lt;dependency&gt;</span>
+            <span class="s0">&lt;groupId&gt;</span><span class="s3">org.projectlombok</span><span class="s0">&lt;/groupId&gt;</span>
+            <span class="s0">&lt;artifactId&gt;</span><span class="s3">lombok</span><span class="s0">&lt;/artifactId&gt;</span>
+        <span class="s0">&lt;/dependency&gt;</span>
+    <span class="s0">&lt;/dependencies&gt;</span>
+<span class="s0">&lt;/project&gt;</span>
+</pre>
+</body>
+</html>
